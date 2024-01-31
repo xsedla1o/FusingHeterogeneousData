@@ -1,0 +1,8 @@
+LICENSE
+README
+pyds.py
+setup.py
+py_dempster_shafer.egg-info/PKG-INFO
+py_dempster_shafer.egg-info/SOURCES.txt
+py_dempster_shafer.egg-info/dependency_links.txt
+py_dempster_shafer.egg-info/top_level.txt

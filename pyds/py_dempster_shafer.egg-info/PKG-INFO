@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: py-dempster-shafer
+Version: 0.7
+Summary: Dempster-Shafer theory library
+Home-page: https://github.com/reineking/pyds
+Author: Thomas Reineking
+Author-email: nikenier@gmail.com
+License: UNKNOWN
+Keywords: Dempster-Shafer belief functions
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+License-File: LICENSE
+
+This repository is unmaintained. In general please consider probabilistic alternatives with a more solid theoretical foundation.
+
+
+A Python library for performing calculations in the Dempster-Shafer theory of evidence.
+
+Features:
+Support for normalized as well as unnormalized belief functions
+Different Monte-Carlo algorithms for combining belief functions
+Various methods related to the generalized Bayesian theorem
+Measures of uncertainty
+Methods for constructing belief functions from data
+
+Both Python 2.7 and Python 3.x are supported.
+
+See examples.py for how to use it.
+
+

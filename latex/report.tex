@@ -1,0 +1,137 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6.5in, 10.5in}]{geometry}
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{{generated/}}
+\usepackage{makeidx}
+\usepackage{import}
+\usepackage{minted}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\begin{document}
+\title{Experiment Results Report}
+\author{Ondřej Sedláček \\
+\textit{CESNET} \\
+Prague, Czech Republic \\
+ondrej.sedlacek@cesnet.cz}
+\maketitle
+
+\tableofcontents
+\clearpage
+
+\section{Statistics of Module Data Counts}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{intersection.pdf}
+	\caption{\textbf{Counts of overlapping attribute data.}}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\subimport{generated/}{module_table.tex}
+	\caption{\textbf{Number of sessions containing data from individual modules.} Shown in relation to the current number of data sources.}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\subimport{generated/}{module_table_ttl.tex}
+    \caption{\textbf{Number of sessions in relation to the current number of data sources.} Data from the http\_ua module are not included in the sum.}
+\end{table}
+
+
+\clearpage
+\section{Experiments}
+
+\subsection{Metrics of Individual Modules}
+
+\begin{figure}[H]
+	\centering
+    \subimport{generated/}{individual_modules_plots.tex}
+    \caption{\textbf{Confusion matrices of individual modules.} }
+	\label{cm-modules}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\subimport{generated/}{individual_modules_table.tex}
+	\caption{\textbf{Metrics of individual modules.}}
+	\label{tab:metrics-modules}
+\end{table}
+
+\clearpage
+\subsection{Rule Training}
+
+\begin{table}[H]
+	\centering
+	\subimport{generated/}{training_rules_table.tex}
+	\caption{\textbf{Metrics of combination methods using trained rules.}}
+	\label{tab:metrics-combination-2}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\subimport{generated/}{training_rules_table_norm.tex}
+	\caption{\textbf{Metrics of combination methods using trained rules, normalized to the oracle.}}
+	\label{tab:metrics-combination-2-1}
+\end{table}
+
+\subsection{Modulation of Belief Mass}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.49\linewidth]{f1.pdf}\hfill
+	\includegraphics[width=0.49\linewidth]{f2.pdf}\\
+	\caption{\textbf{Functions $f_1$ and $f_2$.}}
+	\label{belief-modulation-functions}
+\end{figure}
+
+
+\begin{table}[H]
+	\centering
+	\subimport{generated/}{modulating_belief_table.tex}
+	\caption{\textbf{Metrics of combination methods using modulated belief mass.}}
+\end{table}
+
+\clearpage
+\subsection{Conclusion}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{methods_metrics.pdf}
+    \caption{\textbf{Comparison of metrics of tested methods.} Legend:
+    \textit{WMV} -- Weighted majority voting,
+    \textit{D-S1} -- D-S method of confusion matrix distribution,
+    \textit{D-S2} -- D-S method of two focal hypotheses,
+    \textit{DSGD} -- D-S method optimized using the gradient descent algorithm,
+    \textit{DT} -- Decision tree,
+    \textit{RF} -- Random forest,
+    \textit{AB} -- AdaBoost,
+    \textit{ORA} -- Oracle.
+    }
+	\label{metrics-comparison}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{modules-acc.pdf}\hfil
+	\includegraphics[width=0.5\textwidth]{modules_acc_weighted.pdf}
+	\caption{\textbf{Relation of modules' accuracy to the composition of the dataset.}}
+	\label{metrics-modules}
+\end{figure}
+
+\clearpage
+\section{Generated Rules}
+
+\subimport{generated/}{rules.tex}
+
+\end{document}

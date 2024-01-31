@@ -1,0 +1,6 @@
+,OperatingSystem.Windows,OperatingSystem.Linux,OperatingSystem.MacOS,OperatingSystem.iOS,OperatingSystem.Android
+OperatingSystem.Windows,0.7,0.075,0.075,0.075,0.075
+OperatingSystem.Linux,0.075,0.7,0.075,0.075,0.075
+OperatingSystem.MacOS,0.075,0.075,0.7,0.075,0.075
+OperatingSystem.iOS,0.075,0.075,0.075,0.7,0.075
+OperatingSystem.Android,0.075,0.075,0.075,0.075,0.7

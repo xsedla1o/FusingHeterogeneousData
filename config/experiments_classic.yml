@@ -1,0 +1,171 @@
+# Data structure & paths configuration
+ATTR_CONF_DIR: "config/attr_conf"
+TAXONOMY_FILE_PATH: "config/label_fusion_taxonomy.yaml"
+RANDOM_STATE: 1
+RULES:
+  "http_ua": "config/rules/informed_rules/http_ua.conf"
+  "os_by_tcpip": "config/rules/informed_rules/os_by_tcpip.conf"
+  "os_by_tls": "config/rules/informed_rules/os_by_tls.conf"
+  "sdp_labels": "config/rules/informed_rules/sdp_labels.conf"
+  "tags_by_services": "config/rules/informed_rules/tags_by_services.conf"
+REF_ATTR_COLUMNS:
+  - 'operating_system_ua'
+  - 'hardware_type_ua'
+  - 'operating_platform_ua'
+ATTR_COLUMNS:
+  - 'os_by_tcpip'
+  - 'operating_system_ua'
+  - 'hardware_type_ua'
+  - 'operating_platform_ua'
+  - 'tags_by_services'
+  - 'open_ports'
+  - 'tls_os_family'
+  - 'tls_os_name'
+  - 'tls_os_version'
+  - 'tls_categories'
+  - 'sdp_label'
+  - 'dnssd_service'
+  - 'dnssd_query'
+  - 'ssdp_query'
+  - 'ssdp_service'
+
+BASIC:
+  INFORMED:
+    RAW_INPUT_SOURCE: "data/source/dataset.csv"
+    LABEL_RESULTS_OUTPUT: "data/generated/label_results.csv"
+    JOINED_RESULTS_OUTPUT: "data/generated/joined_results.csv"
+
+    RULES:
+      "http_ua": "config/rules/informed_rules/http_ua.conf"
+      "os_by_tcpip": "config/rules/informed_rules/os_by_tcpip.conf"
+      "os_by_tls": "config/rules/informed_rules/os_by_tls.conf"
+      "sdp_labels": "config/rules/informed_rules/sdp_labels.conf"
+      "tags_by_services": "config/rules/informed_rules/tags_by_services.conf"
+
+REFERENCE:
+  RAW_INPUT_SOURCE: "data/source/dataset.csv"
+  LABEL_RESULTS_SOURCE: "data/generated/label_results.csv"
+
+  REFERENCE_OUT: "data/generated/joined_reference.csv"
+
+SANITIZER:
+  INFORMED:
+    RAW_INPUT_SOURCE: "data/source/dataset.csv"
+    LABEL_RESULTS_SOURCE: "data/generated/label_results.csv"
+    JOINED_RESULTS_SOURCE: "data/generated/joined_results.csv"
+    REFERENCE_SOURCE: "data/generated/joined_reference.csv"
+
+    RAW_INPUT_OUT: "data/generated/sanitized_input.csv"
+    LABEL_RESULTS_OUT: "data/generated/sanitized_results.csv"
+    JOINED_RESULTS_OUT: "data/generated/sanitized_joined_results.csv"
+    REFERENCE_OUT: "data/generated/sanitized_reference.csv"
+
+COMBINERS:
+  LABEL_RESULTS_SOURCE: "data/generated/sanitized_results.csv"
+  REFERENCE_SOURCE: "data/generated/sanitized_reference.csv"
+
+  PRIORITY_OUT: "data/generated/priority_joined_results.csv"
+  MAJORITY_OUT: "data/generated/majority_joined_results.csv"
+  ORACLE_OUT: "data/generated/oracle_joined_results.csv"
+
+FILTER:
+  N1:
+    RAW_INPUT_SOURCE: "data/generated/sanitized_input.csv"
+    LABEL_RESULTS_SOURCE: "data/generated/sanitized_results.csv"
+    REFERENCE_SOURCE: "data/generated/sanitized_reference.csv"
+
+    RAW_INPUT_OUT: "data/generated/filtered_input_n1.csv"
+    LABEL_RESULTS_OUT: "data/generated/filtered_results_n1.csv"
+    REFERENCE_OUT: "data/generated/filtered_reference_n1.csv"
+  N2:
+    RAW_INPUT_SOURCE: "data/generated/sanitized_input.csv"
+    LABEL_RESULTS_SOURCE: "data/generated/sanitized_results.csv"
+    REFERENCE_SOURCE: "data/generated/sanitized_reference.csv"
+
+    RAW_INPUT_OUT: "data/generated/filtered_input_n2.csv"
+    LABEL_RESULTS_OUT: "data/generated/filtered_results_n2.csv"
+    REFERENCE_OUT: "data/generated/filtered_reference_n2.csv"
+  N3:
+    RAW_INPUT_SOURCE: "data/generated/sanitized_input.csv"
+    LABEL_RESULTS_SOURCE: "data/generated/sanitized_results.csv"
+    REFERENCE_SOURCE: "data/generated/sanitized_reference.csv"
+
+    RAW_INPUT_OUT: "data/generated/filtered_input_n3.csv"
+    LABEL_RESULTS_OUT: "data/generated/filtered_results_n3.csv"
+    REFERENCE_OUT: "data/generated/filtered_reference_n3.csv"
+
+RULE_TRAINING:
+  RAW_INPUT_SOURCE: "data/generated/sanitized_input.csv"
+  REFERENCE_SOURCE: "data/generated/sanitized_reference.csv"
+
+  PARAMS_METRICS: "data/generated/param_results.csv"
+  DS_METRICS:
+    DS1: "data/generated/kfold_results-ds1.csv"
+    DS2: "data/generated/kfold_results-ds2.csv"
+
+  RULE_OUTPUT: "data/generated/out.conf"
+
+KFOLD_VALIDATION:
+  RAW_INPUT_SOURCE: "data/generated/sanitized_input.csv"
+  REFERENCE_SOURCE: "data/generated/sanitized_reference.csv"
+
+  METRICS_OUT: "data/generated/kfold_results.csv"
+  RESULTS_OUT: "data/generated/kfold_forensics.csv"
+
+PARAM_OPTIMIZATION:
+  RAW_INPUT_SOURCE: "data/generated/sanitized_input.csv"
+  REFERENCE_SOURCE: "data/generated/sanitized_reference.csv"
+
+  PARAM_OUTPUT: "data/generated/optimized_params.csv"
+
+FUNCTION_TESTER:
+  RAW_INPUT_SOURCE: "data/generated/sanitized_input.csv"
+  REFERENCE_SOURCE: "data/generated/sanitized_reference.csv"
+  PARAMS_SOURCES:
+    - "data/generated/optimized_params.csv"
+  METRICS_OUT: "data/generated/param_results.csv"
+  RESULTS_OUT: "data/generated/param_forensics.csv"
+
+CHARACTERISTICS_EXTRACTOR:
+  RAW_INPUT_SOURCE: 'data/source/dataset.csv'
+  RESULTS_SOURCE: 'data/generated/label_results.csv'
+  SANITIZED_RESULTS_SOURCE: 'data/generated/sanitized_results.csv'
+  SANITIZED_REFERENCE_SOURCE: 'data/generated/sanitized_reference.csv'
+  JOINED_RESULTS_SOURCE: 'data/generated/sanitized_joined_results.csv'
+
+  ATTR_VALS_OUT: 'data/synthesis/attr_values.json'
+  MODULE: 'data/synthesis/module_distribution.csv'
+  OVERLAP: 'data/synthesis/overlap_distribution.csv'
+  OS: 'data/synthesis/os_distribution.csv'
+  MODULE_CM_PATHS:
+    http_ua: 'data/synthesis/http_ua_cm.csv'
+    os_by_tcpip: 'data/synthesis/os_by_tcpip_cm.csv'
+    os_by_tls: 'data/synthesis/os_by_tls_cm.csv'
+    sdp_labels: 'data/synthesis/sdp_labels_cm.csv'
+    tags_by_services: 'data/synthesis/tags_by_services_cm.csv'
+
+DATASET_GENERATOR:
+  CURRENT:
+    ATTR_VALS: 'config/synthesis/attr_values.json'
+    OVERLAP: 'config/synthesis/current/overlap_distribution.csv'
+    MODULE: 'config/synthesis/current/module_distribution.csv'
+    OS: 'config/synthesis/current/os_distribution.csv'
+    MODULE_CM_PATHS:
+      http_ua: 'config/synthesis/current/http_ua_cm.csv'
+      os_by_tcpip: 'config/synthesis/current/os_by_tcpip_cm.csv'
+      os_by_tls: 'config/synthesis/current/os_by_tls_cm.csv'
+      sdp_labels: 'config/synthesis/current/sdp_labels_cm.csv'
+      tags_by_services: 'config/synthesis/current/tags_by_services_cm.csv'
+    DATASET_OUT: 'data/source/dataset.csv'
+  FULL_SYNTH:
+    ATTR_VALS: 'config/synthesis/synth_values.json'
+    OVERLAP: 'config/synthesis/current/overlap_distribution.csv'
+    MODULE: 'config/synthesis/current/module_distribution.csv'
+    OS: 'config/synthesis/current/os_distribution.csv'
+    MODULE_CM_PATHS:
+      http_ua: 'config/synthesis/current/http_ua_cm.csv'
+      os_by_tcpip: 'config/synthesis/current/os_by_tcpip_cm.csv'
+      os_by_tls: 'config/synthesis/current/os_by_tls_cm.csv'
+      sdp_labels: 'config/synthesis/current/sdp_labels_cm.csv'
+      tags_by_services: 'config/synthesis/current/tags_by_services_cm.csv'
+    DATASET_OUT: 'data/source/dataset.csv'

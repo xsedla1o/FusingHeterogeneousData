@@ -1,0 +1,525 @@
+{
+  "operating_system_ua": {
+    "OperatingSystem.Windows": {
+      "values": [
+        "Windows",
+        "Windows 10",
+        "Windows 7",
+        "Windows 8",
+        "Windows 8.1",
+        "Windows NT",
+        "Windows XP"
+      ],
+      "mean": 1.0475276044167068,
+      "std": 0.2557967109860764
+    },
+    "OperatingSystem.Linux": {
+      "values": [
+        "CentOS",
+        "Darwin Linux",
+        "Debian",
+        "Fedora",
+        "Fedora Linux",
+        "FreeBSD",
+        "Linux",
+        "Oracel Linux",
+        "Rockz Linux",
+        "Ubuntu",
+        "Ubuntu Linux 0.18",
+        "openSUSE Linux"
+      ],
+      "mean": 1.0611077664057798,
+      "std": 0.29474380114627713
+    },
+    "OperatingSystem.MacOS": {
+      "values": [
+        "Mac OS",
+        "Mac OS X",
+        "Mac OS X (Yosemite)",
+        "Mac OS X 10.10 (Yosemite)",
+        "Mac OS X 10.12 (Sierra)",
+        "Mac OS X 10.4 (Tiger)",
+        "Mac OS X 10.6 (Snow Leopard)",
+        "Mac OS X 10.9 (Mavericks)"
+      ],
+      "mean": 1.0728476821192052,
+      "std": 0.3066446861666285
+    },
+    "OperatingSystem.iOS": {
+      "values": [
+        "Apple iOS",
+        "Apple iOS 15.3.1",
+        "iOS 12.2",
+        "iPhone iOS 10.3.2",
+        "iPhone iOS 13.1",
+        "iPhone iOS 14.4.2",
+        "iPhone iOS 14.5.1",
+        "iPhone iOS 14.7.1",
+        "iPhone iOS 14.8.1",
+        "iPhone iOS 15.0",
+        "iPhone iOS 15.2.1",
+        "iPhone iOS 15.3.1",
+        "iPhone iOS 15.4",
+        "iPhone iOS 15.4.1"
+      ],
+      "mean": 1.0380952380952382,
+      "std": 0.23599069892121652
+    },
+    "OperatingSystem.Android": {
+      "values": [
+        "Android",
+        "Android 10.0",
+        "Android 11.0",
+        "Android 2.0",
+        "Android 4.0 (Ice Cream Sandwich)",
+        "Android 5 (Lollipop)",
+        "Android 6.0 (Marshmallow)",
+        "Android 7 (Nougat)",
+        "Android 8 (Oreo)",
+        "Android 9.0 (Pie)"
+      ],
+      "mean": 1.0,
+      "std": 0.0
+    }
+  },
+  "hardware_type_ua": {
+    "OperatingSystem.Windows": {
+      "values": [
+        "computer",
+        "mobile",
+        "phone",
+        "server",
+        "tablet"
+      ],
+      "mean": 1.0105616898703793,
+      "std": 0.10222592908583024
+    },
+    "OperatingSystem.Linux": {
+      "values": [
+        "computer",
+        "mobile",
+        "phone",
+        "server",
+        "tablet"
+      ],
+      "mean": 1.0048163756773028,
+      "std": 0.06923278271626757
+    },
+    "OperatingSystem.MacOS": {
+      "values": [
+        "computer",
+        "phone"
+      ],
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "OperatingSystem.iOS": {
+      "values": [
+        "computer",
+        "mobile",
+        "phone",
+        "server",
+        "tablet"
+      ],
+      "mean": 1.0571428571428572,
+      "std": 0.2700466072144348
+    },
+    "OperatingSystem.Android": {
+      "values": [
+        "billboard",
+        "computer",
+        "mobile",
+        "phone",
+        "tablet"
+      ],
+      "mean": 1.013157894736842,
+      "std": 0.11395071102426825
+    }
+  },
+  "operating_platform_ua": {
+    "OperatingSystem.Windows": {
+      "values": [
+        "OnePlus A6013"
+      ],
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "OperatingSystem.Linux": {
+      "values": [
+        ""
+      ],
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "OperatingSystem.MacOS": {
+      "values": [
+        "Apple iPhone 7"
+      ],
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "OperatingSystem.iOS": {
+      "values": [
+        "Apple",
+        "Apple iPad",
+        "Apple iPhone",
+        "Apple iPhone 7",
+        "Apple iPhone SE",
+        "Samsung SM-G900F",
+        "Samsung SM-G960N",
+        "Samsung SM-N910W8"
+      ],
+      "mean": 1.0232558139534884,
+      "std": 0.1507148999629735
+    },
+    "OperatingSystem.Android": {
+      "values": [
+        "LG G710",
+        "Lenovo",
+        "OnePlus A5000",
+        "Redmi",
+        "Redmi Note 3",
+        "Samsung Nexus 10",
+        "Samsung SM-G900F",
+        "Samsung SM-G925T",
+        "Samsung SM-G975F",
+        "Samsung SM-N910W8"
+      ],
+      "mean": 1.0288461538461537,
+      "std": 0.16737399216855012
+    }
+  },
+  "a": {
+    "OperatingSystem.Windows": {
+      "values": [
+        "Windows"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Linux": {
+      "values": [
+        "Linux"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.MacOS": {
+      "values": [
+        "Mac OS X"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.iOS": {
+      "values": [
+        "iOS"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Android": {
+      "values": [
+        "Android"
+      ],
+      "mean": null,
+      "std": null
+    }
+  },
+  "b": {
+    "OperatingSystem.Windows": {
+      "values": [
+        "Windows"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Linux": {
+      "values": [
+        "Linux"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.MacOS": {
+      "values": [
+        "Mac OS X"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.iOS": {
+      "values": [
+        "iOS"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Android": {
+      "values": [
+        "Android"
+      ],
+      "mean": null,
+      "std": null
+    }
+  },
+  "c": {
+    "OperatingSystem.Windows": {
+      "values": [
+        "Windows"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Linux": {
+      "values": [
+        "Linux"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.MacOS": {
+      "values": [
+        "Mac OS X"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.iOS": {
+      "values": [
+        "iOS"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Android": {
+      "values": [
+        "Android"
+      ],
+      "mean": null,
+      "std": null
+    }
+  },
+  "d": {
+    "OperatingSystem.Windows": {
+      "values": [
+        "Windows"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Linux": {
+      "values": [
+        "Linux"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.MacOS": {
+      "values": [
+        "Mac OS X"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.iOS": {
+      "values": [
+        "iOS"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Android": {
+      "values": [
+        "Android"
+      ],
+      "mean": null,
+      "std": null
+    }
+  },
+  "e": {
+    "OperatingSystem.Windows": {
+      "values": [
+        "Windows"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Linux": {
+      "values": [
+        "Linux"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.MacOS": {
+      "values": [
+        "Mac OS X"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.iOS": {
+      "values": [
+        "iOS"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Android": {
+      "values": [
+        "Android"
+      ],
+      "mean": null,
+      "std": null
+    }
+  },
+  "f": {
+    "OperatingSystem.Windows": {
+      "values": [
+        "Windows"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Linux": {
+      "values": [
+        "Linux"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.MacOS": {
+      "values": [
+        "Mac OS X"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.iOS": {
+      "values": [
+        "iOS"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Android": {
+      "values": [
+        "Android"
+      ],
+      "mean": null,
+      "std": null
+    }
+  },
+  "g": {
+    "OperatingSystem.Windows": {
+      "values": [
+        "Windows"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Linux": {
+      "values": [
+        "Linux"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.MacOS": {
+      "values": [
+        "Mac OS X"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.iOS": {
+      "values": [
+        "iOS"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Android": {
+      "values": [
+        "Android"
+      ],
+      "mean": null,
+      "std": null
+    }
+  },
+  "h": {
+    "OperatingSystem.Windows": {
+      "values": [
+        "Windows"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Linux": {
+      "values": [
+        "Linux"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.MacOS": {
+      "values": [
+        "Mac OS X"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.iOS": {
+      "values": [
+        "iOS"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Android": {
+      "values": [
+        "Android"
+      ],
+      "mean": null,
+      "std": null
+    }
+  },
+  "i": {
+    "OperatingSystem.Windows": {
+      "values": [
+        "Windows"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Linux": {
+      "values": [
+        "Linux"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.MacOS": {
+      "values": [
+        "Mac OS X"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.iOS": {
+      "values": [
+        "iOS"
+      ],
+      "mean": null,
+      "std": null
+    },
+    "OperatingSystem.Android": {
+      "values": [
+        "Android"
+      ],
+      "mean": null,
+      "std": null
+    }
+  }
+}

@@ -1,0 +1,20 @@
+# Dependency of IP address on IP:port, as recognized by dependency_mapping module
+entity:
+  id: ip_dependency
+  name: IP dependency
+  key_data_type: string
+  auto_create_record: true
+attribs:
+#  num_packets:
+#    name: Number of packets transferred
+#    data_type: int
+#    history: true
+#    history_params:
+#      max_age: 14d
+  dep:
+    name: Dependency parameters
+    data_type: dict<num_packets:int>
+    history: true
+    history_params:
+      max_age: 7d
+

@@ -1,0 +1,97 @@
+entity:
+  id: mac
+  name: mac address
+  key_data_type: string
+  auto_create_record: true
+attribs:
+  # Vendor by MAC address
+  vendor:
+    name: Vendor by MAC
+    descripion: Vendor (company name) determined by registered prefix of device's MAC address
+    data_type: string
+
+  # Attributes of SDP Analyzer module
+  sdp_label:
+    name: SDP label
+    description: Label(s) derived from various SDP data. Dict has 2 entries, 'name' and 'value'.
+    data_type: dict<name:string,value:string>
+    multi_value: true
+    history: true
+    history_params:
+      pre_validity: 8h
+      post_validity: 8h
+      max_age: 7d
+
+  dnssd_query:
+    name: DNS-SD query
+    description: DNS-SD query made by the device.
+    data_type: string
+    multi_value: true
+    history: true
+    history_params:
+      pre_validity: 8h
+      post_validity: 8h
+      max_age: 7d
+
+  dnssd_service:
+    name: DNS-SD service
+    description: Service announced by the device via DNS-SD. Dict has 2 entries, 'port' and 'service'.
+    data_type: dict<port:int,service:string>
+    multi_value: true
+    history: true
+    history_params:
+      pre_validity: 8h
+      post_validity: 8h
+      max_age: 7d
+
+  ssdp_query:
+    name: SSDP query
+    description: SSDP search type sent by the device.
+    data_type: string
+    multi_value: true
+    history: true
+    history_params:
+      pre_validity: 8h
+      post_validity: 8h
+      max_age: 7d
+
+  ssdp_service:
+    name: SSDP service
+    description: Service announced by the device via SSDP. Dict has 2 entries, 'port' and 'service'.
+    data_type: dict<port:int,service:string>
+    multi_value: true
+    history: true
+    history_params:
+      pre_validity: 8h
+      post_validity: 8h
+      max_age: 7d
+
+  nbns_name:
+    name: NBNS name
+    description: NetBIOS name of the device, as announced via NetBIOS Name Service. Dict has 2 entries, 'name' and 'suffix'.
+    data_type: dict<name:string,suffix:int>
+    multi_value: true
+    history: true
+    history_params:
+      pre_validity: 8h
+      post_validity: 8h
+      max_age: 7d
+
+  # Device type
+  device_type:
+    name: Device type
+    description: Type of device (guessed based on other attributes)
+    data_type: category
+    # No pre-defined categories for now - let's stay open to ease experiments
+#    categories:
+#      - pc        # Classic desktop computer or notebook
+#      - mobile    # Mobile phone or tablet
+#      - server    # Server - a 24/7 running computer whose main role is to provide one or more services over a network
+#      - netdevice # Router, switch, firewall, etc.
+#      - printer   # Printer
+#      - nas       # Network attached storage (NAS) device
+#      - tv        # Smart TV
+#      - ipcam     # IP camera
+#      - voip      # VoIP device (phone)
+#      - iot       # Other IoT
+    # History not stored, since this is derived by a secondary module and we don't know how to store history (create datapoints) in such case, yet

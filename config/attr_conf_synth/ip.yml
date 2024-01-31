@@ -1,0 +1,128 @@
+entity:
+  id: ip
+  name: IP address
+  key_data_type: string
+  auto_create_record: false
+attribs:
+  # HTTP User-Agent
+  operating_system_ua:
+    name: Operating system by HTTP User-Agent
+    descripion: Operating system derived from the HTTP User-Agent headers sent by the device.
+    data_type: category
+    confidence: true
+    multi_value: true
+    history: true
+    history_params:
+      pre_validity: 1h
+      post_validity: 1h
+      max_age: 7d
+
+  hardware_type_ua:
+    name: Hardware type by HTTP User-Agent
+    descripion: Hardware type (Device type) derived from the HTTP User-Agent headers sent by the device.
+    data_type: category
+    multi_value: true
+    confidence: true
+    history: true
+    history_params:
+      pre_validity: 1h
+      post_validity: 1h
+      max_age: 7d
+
+  operating_platform_ua:
+    name: Operating platform by HTTP User-Agent
+    descripion: Operating platform derived from the HTTP User-Agent headers sent by the device.
+    data_type: string
+    multi_value: true
+    confidence: true
+    history: true
+    history_params:
+      pre_validity: 1h
+      post_validity: 1h
+      max_age: 7d
+
+  software_name_ua:
+    name: Software name by HTTP User-Agent
+    descripion: Name of the software used by the device (derived from the HTTP User-Agent headers it sent).
+    data_type: string
+    multi_value: true
+    confidence: true
+    history: true
+    history_params:
+      pre_validity: 1h
+      post_validity: 1h
+      max_age: 7d
+
+  software_type_ua:
+    name: Software type by HTTP User-Agent
+    descripion: Type of the software used by the device (derived from the HTTP User-Agent headers it sent).
+    data_type: category
+    multi_value: true
+    confidence: true
+    history: true
+    history_params:
+      pre_validity: 1h
+      post_validity: 1h
+      max_age: 7d
+
+  http_useragent:
+    name: HTTP User-Agent used by device
+    descripion: Full User-Agent string used in HTTP requests made by the device.
+    data_type: string
+    multi_value: true
+    confidence: true
+    history: true
+    history_params:
+      pre_validity: 1h
+      post_validity: 1h
+      max_age: 7d
+
+  # Label Fusion
+  os_evaluations:
+    name: OS Evaluations
+    description: Evaluations of operating system based on entity's other attributes.
+    data_type: json
+
+  os_taxonomic:
+    name: OS Taxonomic Classification
+    description: Taxonomic classification of operating system based on entity's other attributes.
+    data_type: json
+
+  device_evaluations:
+    name: Device Evaluations
+    description: Evaluations of device type based on entity's other attributes.
+    data_type: json
+
+  device_taxonomic:
+    name: Device Taxonomic Classification
+    description: Taxonomic classification of device type based on entity's other attributes.
+    data_type: json
+
+# Synthetic modules
+  a:
+    name: A module
+    data_type: string
+  b:
+    name: A module
+    data_type: string
+  c:
+    name: A module
+    data_type: string
+  d:
+    name: A module
+    data_type: string
+  e:
+    name: A module
+    data_type: string
+  f:
+    name: A module
+    data_type: string
+  g:
+    name: A module
+    data_type: string
+  h:
+    name: A module
+    data_type: string
+  i:
+    name: A module
+    data_type: string

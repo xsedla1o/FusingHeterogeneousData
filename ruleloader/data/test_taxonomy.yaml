@@ -1,0 +1,23 @@
+Device:
+  # EndDevice
+  Workstation:
+  SmartPhone:
+
+  # IoT
+  SmartTV:
+  VoiceAssistant:
+  Hub:
+  Appliance:
+
+  # NetDevice
+  Router:
+  NAS:
+  Server:
+
+
+OperatingSystem:
+  Windows:
+  Linux:
+  MacOS:
+  iOS:
+  Android:

@@ -1,0 +1,9 @@
+{
+  "data": [
+    {
+      "id": "paper",
+      "description": "Dataset used for paper evaluation",
+      "path": "data/stash/paper"
+    }
+  ]
+}
